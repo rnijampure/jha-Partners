@@ -1,0 +1,293 @@
+---
+kind: pipeline
+type: docker
+name: default_feature
+
+steps:
+# - name: build
+#   pull: never
+#   image: node:14
+#   commands:
+#   - bash scripts/build-dev.sh
+
+# - name: code_analysis
+#   pull: never
+#   image: node:14
+#   environment:
+#     SONAR_HOST:
+#       from_secret: sonar_host
+#     SONAR_TOKEN:
+#       from_secret: sonar_token
+#   commands:
+#   - bash scripts/code_analysis.sh
+
+trigger:
+  branch:
+  - feature/NEC1099-*
+  - feature/EM-*
+
+---
+kind: pipeline
+type: docker
+name: default_develop
+
+steps:
+- name: S3_Upload
+  pull: never
+  image: plugins/s3
+  settings:
+    bucket:
+      from_secret: bucket_name
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    source: '**/*/'
+    exclude:
+      - .drone.yml
+      - .gitignore
+      - .git
+      - README.md 
+
+
+# - name: build
+#   pull: never
+#   image: node:14
+#   commands:
+#   - bash scripts/build-dev.sh
+
+# - name: code_analysis
+#   pull: never
+#   image: node:14
+#   environment:
+#     SONAR_HOST:
+#       from_secret: sonar_host
+#     SONAR_TOKEN:
+#       from_secret: sonar_token
+#   commands:
+#   - bash scripts/code_analysis.sh
+
+# - name: S3_Upload
+#   pull: never
+#   image: plugins/s3
+#   settings:
+#     bucket:
+#       from_secret: bucket_name
+#     access_key:
+#       from_secret: aws_access_key_id
+#     secret_key:
+#       from_secret: aws_secret_access_key
+#     source: *
+#     # strip_prefix: dist/NEC
+
+# - name: invalidate_cloudfront_assets
+#   pull: never
+#   image: 737472818492.dkr.ecr.us-east-1.amazonaws.com/drone-cloudfront-invalidate
+#   environment:
+#     AWS_ACCESS_KEY_ID:
+#       from_secret: aws_access_key_id
+#     AWS_SECRET_ACCESS_KEY:
+#       from_secret: aws_secret_access_key
+#     PLUGIN_DISTRIBUTION_ID:
+#       from_secret: plugin_distribution_id
+
+# - name: build_docker_image
+#   image: plugins/ecr:18.09.0
+#   settings:
+#     access_key:
+#       from_secret: aws_access_key_id
+#     secret_key:
+#       from_secret: aws_secret_access_key
+#     repo:
+#       from_secret: ecr_repo_url_dev
+#     registry:
+#       from_secret: ecr_repo_id
+#     dockerfile: docker/Dockerfile
+#     tags:
+#       - latest
+#       - ${DRONE_BUILD_NUMBER}
+#     region: us-east-1
+
+# - name: deploy_docker_image
+#   image: appleboy/drone-ssh
+#   settings:
+#     host:
+#       from_secret: host
+#     username:
+#       from_secret: username
+#     key:
+#       from_secret: ssh_key
+#     passphrase: 1234  
+#     port: 22
+#     script:
+#       - bash /home/ubuntu/deploy_script.sh
+
+# - name: deploy_docker_image
+#   pull: never
+#   image: 737472818492.dkr.ecr.us-east-1.amazonaws.com/ecs-cli
+#   commands:
+#   - bash scripts/deploy-dev.sh
+#   environment:
+#     AWS_REGION:
+#       from_secret: plugin_aws_region
+#     CLUSTER_NAME:
+#       from_secret: plugin_dev_cluster_name
+#     PROJECT_NAME:
+#       from_secret: plugin_dev_project_name
+#     AWS_ACCESS_KEY_ID:
+#       from_secret: aws_access_key_id
+#     AWS_SECRET_ACCESS_KEY:
+#       from_secret: aws_secret_access_key       
+
+trigger:
+  branch:
+  - develop
+
+---
+kind: pipeline
+type: docker
+name: default_release
+
+steps:
+- name: build
+  pull: never
+  image: node:14
+  commands:
+  - bash scripts/build-preprod.sh
+
+- name: code_analysis
+  pull: never
+  image: node:14
+  environment:
+    SONAR_HOST:
+      from_secret: sonar_host
+    SONAR_TOKEN:
+      from_secret: sonar_token
+  commands:
+  - bash scripts/code_analysis.sh
+
+- name: build_docker_image
+  image: plugins/ecr:18.09.0
+  settings:
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    repo:
+      from_secret: ecr_repo_url_preprod
+    registry:
+      from_secret: ecr_repo_id
+    dockerfile: docker/Dockerfile
+    tags:
+      - latest
+      - ${DRONE_BUILD_NUMBER}
+    region: us-east-1
+
+- name: deploy_docker_image
+  pull: never
+  image: 737472818492.dkr.ecr.us-east-1.amazonaws.com/ecs-cli
+  commands:
+  - bash scripts/deploy-preprod.sh
+  environment:
+    AWS_REGION:
+      from_secret: plugin_aws_region
+    CLUSTER_NAME:
+      from_secret: plugin_preprod_cluster_name
+    PROJECT_NAME:
+      from_secret: plugin_preprod_project_name
+    AWS_ACCESS_KEY_ID:
+      from_secret: aws_access_key_id
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: aws_secret_access_key 
+
+trigger:
+  branch:
+  - release/NEC1099-*
+
+---
+kind: pipeline
+type: docker
+name: default_prod
+
+steps:
+- name: build
+  pull: never
+  image: node:14
+  commands:
+  - bash scripts/build.sh
+
+- name: code_analysis
+  pull: never
+  image: node:14
+  environment:
+    SONAR_HOST:
+      from_secret: sonar_host
+    SONAR_TOKEN:
+      from_secret: sonar_token
+  commands:
+  - bash scripts/code_analysis.sh
+
+- name: build_docker_image
+  image: plugins/ecr:18.09.0
+  settings:
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    repo:
+      from_secret: ecr_repo_url_prod
+    registry:
+      from_secret: ecr_repo_id
+    dockerfile: docker/Dockerfile
+    tags:
+      - latest
+      - ${DRONE_BUILD_NUMBER}
+    region: us-east-1
+
+- name: deploy_docker_image
+  pull: never
+  image: 737472818492.dkr.ecr.us-east-1.amazonaws.com/ecs-cli
+  commands:
+  - bash scripts/deploy.sh
+  environment:
+    AWS_REGION:
+      from_secret: plugin_aws_region
+    CLUSTER_NAME:
+      from_secret: plugin_prod_cluster_name
+    PROJECT_NAME:
+      from_secret: plugin_prod_project_name
+    AWS_ACCESS_KEY_ID:
+      from_secret: aws_access_key_id
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: aws_secret_access_key 
+
+trigger:
+  branch:
+  - master
+---
+kind: pipeline
+name: notify
+
+clone:
+  disable: true
+
+steps:
+- name: notify
+  image: drillster/drone-email
+  settings:
+    host: smtp.mandrillapp.com
+    port: '587'
+    username:
+      from_secret: email_username
+    password:
+      from_secret: email_password
+    from:
+      from_secret: from_email
+    recipients: [ appsdev@silverminegroup.com ]
+    trigger:
+      status: [ success, failure ]
+
+depends_on: [ default_feature, default_develop, default_release, default_prod  ]
+
+trigger:
+  status: [ success, failure ]

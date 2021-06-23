@@ -1,0 +1,191 @@
+
+    .contact-us header.masthead {
+        min-height: 550px; 
+        height: 550px; 
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+    .contact-us  header.masthead{
+        background-color:  #100e41 ;
+ 
+      }
+      header.masthead .we-propel-bg {
+        background-color: #100e41;
+        background:  url("../assets/img/contact_us.png") no-repeat center middle;
+        background: url("../assets/img/contact_us.png") no-repeat left center, linear-gradient(to top, #121247 148%, #100e41 125%, #100e41 80%, #1a1a6f 54%); 
+   
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: initial;
+        min-height: 525px;
+    }
+      p{
+        color:#100e41;
+        font-size: 18px;
+        font-family: 'Roboto-Medium';
+      }
+      
+.margin-top-15{
+    margin-top: 15px;
+}
+#contact-us-form{
+    background-color: #f2f7fb;
+}
+#contact-us-form .btn-success{
+    width: 250px;
+    color: white;
+    font-family: 'Roboto-Medium';
+    height: 56px;
+    margin: 31px;
+    padding: 17px 94px 15px;
+    background-color: #121247;
+}
+#contact-us-form .btn-cancel{
+    width: 250px;
+    color: white;
+    font-family: 'Roboto-Medium';
+    height: 56px;
+    margin: 31px;
+    padding: 17px 94px 15px; 
+}
+header.masthead {
+    height: 77vh;
+    min-height: 40rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+.form-control.error{
+    border:1px solid red;
+}
+.mandatory{
+    color:red;
+}
+.md-form {
+    position: relative; 
+}
+
+
+.md-form>label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.md-form .form-control {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important
+}
+
+.md-form .form-control.valid+label,.md-form .form-control.invalid+label {
+    overflow: visible
+}
+
+.md-form .input-prefix {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: color .2s;
+    transition: color .2s;
+    color: rgba(0,0,0,0.87);
+    pointer-events: none
+}
+
+.md-form .input-prefix.active {
+    color: #4285f4
+}
+.md-form label.active {
+    -webkit-transform: translateY(-10px) scale(0.8);
+    transform: translateY(-10px) scale(0.8);
+}
+.md-form label.active-error {
+    -webkit-transform: translateY(-20px) scale(0.8);
+    transform: translateY(-20px) scale(0.8);
+}
+
+.md-form label.active {
+    font-size: 1rem;
+}
+.md-form.input-with-pre-icon label {
+    left: 36px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .input-prefix {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-pre-icon .form-control {
+    padding-left: 2.7rem !important
+}
+
+.md-form.input-with-post-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon .form-control {
+    padding-right: 2.7rem !important
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix {
+    right: 16px;
+    left: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .input-prefix:first-of-type {
+    left: 16px;
+    right: initial
+}
+
+.md-form.input-with-post-icon.input-with-pre-icon .form-control {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important
+}
+.md-form label {
+    position: absolute;
+    top: 7px;
+    left: 32px;
+    font-size: 1rem;
+    color: #757575;
+    cursor: text;
+    -webkit-transition: color .2s ease-out,-webkit-transform .2s ease-out;
+    transition: color .2s ease-out,-webkit-transform .2s ease-out;
+    transition: transform .2s ease-out,color .2s ease-out;
+    transition: transform .2s ease-out,color .2s ease-out,-webkit-transform .2s ease-out;
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.md-form>label {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.md-form label.error{position: static;
+    color: red;
+    margin-top: -6px;
+    font-size: 12px;
+}
+@media (max-width: 1000px) {
+    .contact-us   header.masthead .we-propel-bg {
+        background-color: #100e41;
+        background: url(../assets/img/contact_us.png) no-repeat center middle;
+        background: url(../assets/img/contact_us.png) no-repeat left center, linear-gradient(to top, #121247 148%, #100e41 125%, #100e41 80%, #1a1a6f 54%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        min-height: 525px;
+    }
+    .contact-us header.masthead {
+        min-height: 550px;
+        height: 550px;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+}

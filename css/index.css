@@ -1,0 +1,259 @@
+
+.page-section {
+    padding: 8rem 0;
+  }
+  #about.page-section {
+    padding: 0;
+  }
+  .height-600{
+    height: 529px;
+  }
+  .height-half{
+    /*height: calc(100% - 50%);*/
+    height: 300px;
+  }
+  .who_we_are_bg{
+    background:url('../assets/img/who_we_are.png') no-repeat center;
+  }
+  .overlap-image{
+    position: absolute;
+    left: 0;
+    top: -170px;
+  }
+  .who-we-are-text p{
+    font-family: 'Roboto';
+    color:#030e1f;
+  }
+  .who-we-are-text h2{
+    font-family: 'Roboto-Medium';
+    color:#01202e;
+  }
+  .who-we-are-text .text-container{
+    max-width: 401px;
+      margin: auto;
+      margin-top: 17%;
+  
+  }
+  .blue-boxes{
+    background-color: #f1f0ff;
+    margin-right: 5px;
+    max-width: 28%!important;
+    height: 275px;
+    margin: 20px;
+  }
+  .inner-text-content{
+    max-width: 262px;
+    margin: auto;
+    
+    padding-top: 22px;
+  }
+  .blue-boxes.last{background-color: #f1f0ff;
+    margin-right: 0px;
+  }
+  .we-launch-text .text-container{ 
+      margin-top: 30%; 
+        max-width: 458px; 
+  }
+  .who-we-are-text .divider.bg-dark{
+  background-color: #000;
+  border:none;
+  height:3px;
+  width: 90px;
+  max-width: 90px;
+  padding: 2px;
+  margin: 0px;
+  }
+  .left-0{left: 52px;
+    top: 69px;
+    z-index: 1;
+  }
+
+  .g-f-i-icons{
+    height:92px;
+    width: 98px;
+    top: -54px;
+      left: 36%;
+      position: absolute;
+  }
+  .bulb-icon{
+  
+    background: url('../assets/img/Group 2028.webp') no-repeat;
+  }
+  .rocket-icon{
+    background: url('../assets/img/Group 2028.webp') no-repeat;
+    background-position-x: -96px;
+  }
+  .invest-icon{
+    background: url('../assets/img/Group 2028.webp') no-repeat;
+    background-position-x: -200px;
+  }
+  /*portfolio*/
+  
+#AnshuDua .background-checked-blue{
+  width: 100%;
+}
+.height-565-portfolio{
+   height: 543px;
+}
+#AnshuDua .background-checked-blue,
+#SohrobF  .background-checked-blue,
+#poltaverse  .background-checked-blue{
+
+   background: url('../assets/img/portfolio/portfolio-bg.jpg') no-repeat center;
+   background-size: cover;
+}
+#AnshuDua .background-checked-grey{
+   background: url('../assets/img/portfolio/greyBG.jpg') no-repeat center;
+   background-size: cover;
+}
+
+#AnshuDua .inner-text-content,
+#SohrobF .background-checked-grey .inner-text-content,
+#poltaverse  .inner-text-content
+{
+width: 100%;
+max-width: 100%;
+vertical-align: middle;
+margin: auto;
+margin-top: 170px;
+
+}
+.portfolio-main  .inner-text-content {
+   max-width: 100%;
+   margin: auto;
+   padding-top: 22px;
+}
+.stronger{
+   color:#100e41;
+   font-size: 20px;
+   font-family: 'Roboto-Medium';
+}
+.heading-label{
+   color:#100e41;
+   font-size: 18px;
+   font-family: 'Roboto-Medium';
+}
+.display-inline-block{
+   display: inline-block;
+   vertical-align: text-top!important;
+}
+.display-inline-block .heading-label{
+display: inline-block;
+}
+.polta-flipped{
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+}
+.plr-15{
+   padding-right: 15px;
+   padding-left: 15px;
+}
+.inner-text-content p{
+   color:#100e41;
+   font-size: 20px;
+   font-family: 'Roboto-Medium';
+}
+.margin-top-15{
+   margin-top: 15px;
+}
+.height-500{
+   height: 500px;
+}
+.height-545{
+height: 545px;}
+.inner-text-content .btn, .btn.plain-btn{
+   background-color: #f1f0ff;
+   border:1px solid #121247;
+   color:#121247;
+   font-size: 16px;
+   font-family: 'Roboto';
+}
+
+#SohrobF, #poltaverse{
+   display: block;
+}
+
+#SohrobF-Mob, #poltaverse-mob{
+   display: none;
+}
+.mlr-auto{
+   margin-left: auto!important;
+   margin-right: auto!important;
+   display: flex;
+}
+@media (max-width: 767px) {
+   .inner-text-content .btn, .btn.plain-btn{
+       background-color: #f1f0ff;
+       border:1px solid #121247;
+       color:#121247;
+       font-size: 16px;
+       font-family: 'Roboto-Medium';
+   }
+   #SohrobF, #poltaverse{
+       display: none;
+   }
+   #SohrobF-Mob, #poltaverse-mob{
+       display: block;
+   }
+ .background-checked-blue  .sm-text-align-center{
+       text-align: center!important;
+   }
+   .height-565-portfolio{
+       height: 865px;
+   }
+   #AnshuDua .inner-text-content{
+       width: 100%;
+       max-width: 100%;
+       vertical-align: middle;
+       margin: auto;
+       margin-top: 20px;
+       
+       }
+   #SohrobF-Mob .background-checked-blue,  #poltaverse-mob  .background-checked-blue{
+       background-color: #100e41;
+
+   }
+}
+
+@media (max-width: 450px) {
+   .inner-text-content .btn, .btn.plain-btn{
+       background-color: #f1f0ff;
+       border:1px solid #121247;
+       color:#121247;
+       font-size: 16px;
+       font-family: 'Roboto-Medium';
+   }
+   #SohrobF, #poltaverse{
+       display: none;
+   }
+   #SohrobF-Mob, #poltaverse-mob{
+       display: block;
+   }
+ .background-checked-blue  .sm-text-align-center{
+       text-align: center!important;
+   }
+   .height-565-portfolio{
+       height: 865px;
+   }
+   #AnshuDua .inner-text-content{
+       width: 100%;
+       max-width: 100%;
+       vertical-align: middle;
+       margin: auto;
+       margin-top: 20px;
+       
+       }
+   #SohrobF-Mob .background-checked-blue,  #poltaverse-mob  .background-checked-blue{
+       background-color: #100e41;
+
+   }
+
+   .fnf-sm{
+width: 88%;
+   }
+   .height-500 {
+       height: 412px;
+   }
+}
+
+

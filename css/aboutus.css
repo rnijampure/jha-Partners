@@ -1,0 +1,425 @@
+.bg-primary { 
+    background-image: linear-gradient(181deg, #100e41 99%, #0a0927 1%);
+  }
+  .about-us header.masthead.top-bg{
+    
+    background-image: linear-gradient(to top, #121247 149%, #100e41 125%, #100e41 80%, #1a1a6f 54%);}
+  .width-68{
+    width:68%
+  }
+  @media (min-width: 340px) and (max-width: 381px){
+    .manish-mobile-img img {
+      width: 288px!important;
+      height: auto!important;
+      margin: auto;
+      left: 7%;
+      top: 0px!important;
+      z-index: 9;
+  }
+  }  
+
+  @media (min-width: 397px) and (max-width: 497px){
+    .manish-mobile-img img {
+      width: 334px;
+      height: 401px;
+      margin: auto;
+      left: calc(10px + 2.5em);  
+      top: -49px;
+      z-index: 9;
+  }
+  }  
+  @media (min-width: 400px) and (max-width: 497px){
+    .manish-mobile-img img {
+      width: 334px;
+      height: 401px;
+      margin: auto;
+      left: calc(10px + 2.5em);
+      top: -49px;
+      z-index: 9;
+  }
+  }  
+  @media (min-width: 992px){
+    .about-us header.masthead {
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+}
+  .mt-8p{
+      margin-top: 8%;
+  }
+  .manish-text{
+    font-weight: 300;
+      font-size: 18px;
+      color: #01202e;
+      font-family: 'Roboto';
+  }
+  .manish-text .strong{
+      font-weight: 600;
+  }
+   .manish-text-div{
+      position: absolute;
+      right: 0;
+      top:60px;
+  }
+  .height-338 {
+    height: 326px;
+}
+  .inner-text-content {
+    max-width: 262px;
+    margin: auto;
+    padding-top: 22px!important;
+}
+  .col-lg-6.manish-text-div {
+    flex: 0 0 56%;
+    max-width: 56%;
+  }
+  #our_investment-phy{
+
+  }
+#ourFounder{
+display: block;
+  }
+
+  .mt-80 {
+    margin-top: 58px;
+}
+  .blue-boxes-invest{
+  background-color: #ffffff ;
+  margin-right: 5px;
+  max-width: 354px;
+  height: 394px;
+  margin: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+-moz-box-shadow:  0 3px 6px 0 rgba(0, 0, 0, 0.16);
+margin-top: 100px;
+
+}
+.inner-text-content.blue-boxes-invest {
+  padding-top: 0!important;
+}
+.blue-boxes p{
+  font-size: 22px;
+  color: #030e1f!important;
+  margin-top: 20px;
+}
+.our_investment-phy img{
+  max-width: 100%;
+}
+
+.bg-primary-1{
+  background-image: linear-gradient(to bottom, #100e41, #0a0927);
+}
+.manish-mobile-img {
+  width: 334px;
+  height: 401px;
+  margin: auto; 
+  position:relative;
+
+
+} 
+#ourFounderMobile{
+  display: none;
+}
+.height-527 {
+  height: 527px;
+}
+.height-600-about-us {
+  height: 529px;
+}
+
+
+.margin-top-26 {
+ margin-top: 26px;}
+.manish-mobile-img img{
+  width: 334px;
+  height: 401px;
+  margin: auto;  
+
+} 
+@media (max-width: 900px) {
+ .height-600-about-us {
+    height: 603px;
+}
+.height-450 {
+  height: 541px;
+}
+}
+  @media (max-width: 767px) {
+    .col-lg-6.manish-text-div {
+      flex: 0 0 52%;
+      max-width: 52%;
+  }
+    .sm-padding-bottom{
+      padding-bottom: 50px;
+    }
+    .manish-mobile-img img{
+      width: 334px;
+      height: 401px;
+      margin: auto; 
+      
+    
+    } 
+.manish-text-div.height-338{
+  height: 414px;
+}
+#ourFounderMobile{
+  display: none;
+}
+.ourFounder-conitainer.height-450 {
+  height: 544px;
+}
+      
+        .inner-text-content {
+          max-width: 354px;
+          margin: auto;
+          padding-top: 0px;
+      }
+      .manish-text {
+        font-weight: 300;
+        font-size: 18px;
+        color: #01202e;
+        font-family: 'Roboto';
+        max-width: 401px;
+        font-size: 15px;
+    }
+  }
+  .height-394{
+    height:394px;
+  }
+  
+  @media (min-width: 791px) and  (max-width: 993px) {
+    .manish-text {
+      font-weight: 300;
+      font-size: 16px;
+      color: #01202e;
+      font-family: 'Roboto';
+      padding-top: 32px!important;
+  }
+  }
+
+  @media (min-width: 500px) and  (max-width: 650px) {
+    #ourFounderMobile{
+      display: none;
+    }
+    .width-375{
+      width: 375px;
+    }
+.image-container .manish-img-dsktp img{
+  width:240px;
+    margin-top: 64px;
+} 
+.rounded-starter.background-white.text-right{text-align: left!important;
+  background: none;
+}
+.manish-text-div .manish-text.pl-5,
+.manish-text-div .manish-text.pt-5{
+  padding-left: 1rem !important;
+  padding-top: 1rem !important;
+  
+}
+  }
+@media (min-width: 650px) and  (max-width: 790px) {
+  .image-container {
+    max-width: 100px;
+      }
+  #ourFounderMobile{
+    display: none;
+  }
+.image-container .manish-img-dsktp img{
+  width: 286%;
+} 
+.rounded-starter.background-white{
+background: none;
+}
+.manish-text-div .manish-text.pl-5,
+.manish-text-div .manish-text.pt-5{
+padding-left: 1rem !important;
+padding-top: 1rem !important;
+
+}
+.manish-text {
+  font-weight: 300; 
+  color: #01202e;
+  font-family: 'Roboto'; 
+  font-size: 16px;
+  padding-top: 21px!important;
+}
+
+  }
+  @media (min-width: 450px) and  (max-width: 500px) {
+    .manish-mobile-img img {
+      width: 334px;
+      height: 401px;
+      margin: auto;
+      left: 24%!important;
+      top: -49px;
+      z-index: 9;
+  }
+  }
+  @media (min-width: 400px) and  (max-width: 450px) {
+    .manish-mobile-img img {
+      width: 334px;
+      height: 401px;
+      margin: auto;
+      left: 18%!important ;
+      top: -49px;
+      z-index: 9;
+  }
+  }
+  @media (min-width: 390px) and  (max-width: 500px) {
+    #ourFounderMobile{
+      height:850px;
+      display: block;
+    }
+    .image-container {
+  max-width: 100px;
+    }
+  .height-450-small-screen{
+    
+    height: 323px;
+  }
+    .manish-mobile-img img{
+      width: 334px;
+      height: 401px;
+      margin: auto; 
+      position:absolute;
+    
+    } 
+    .manish-mobile-img img{
+      width: 334px;
+      height: 401px;
+      margin: auto; 
+      left: calc(10px + 2.5em);
+      top: -49px;
+      z-index: 9;
+    } 
+  }
+  
+  @media (min-width: 391px) and  (max-width: 767px) {
+ 
+  .image-container {
+max-width: 100px;
+  }
+.height-450-small-screen{
+  
+  height: 323px;
+}
+  .manish-mobile-img img{
+    width: 334px;
+    height: 401px;
+    margin: auto; 
+    position:absolute;
+  
+  } 
+  .manish-mobile-img img{
+    width: 334px;
+    height: 401px;
+    margin: auto; 
+    left: 13%;
+    top: -49px;
+    z-index: 9;
+  } 
+}
+
+@media (max-width: 390px) {
+  .manish-text {
+    font-weight: 300;
+    font-size: 18px;
+    color: #01202e;
+    font-family: 'Roboto';
+    max-width: 345px;
+    font-size: 15px;
+    padding-left: 19px!important;
+} 
+    #ourFounderMobile{
+  height:850px;
+  display: block;
+}
+.image-container {
+max-width: 100px;
+}
+.height-450-small-screen{
+
+height: 323px;
+}
+.manish-mobile-img img{
+width: 334px;
+height: 401px;
+margin: auto; 
+position:absolute;
+
+} 
+.manish-mobile-img img{
+width: 334px;
+height: 401px;
+margin: auto; 
+left: 7%;
+top: -49px;
+z-index: 9;
+}   
+}/*  */
+
+@media (max-width: 340px) {
+  .manish-text {
+    font-weight: 300;
+    font-size: 18px;
+    color: #01202e;
+    font-family: 'Roboto';
+    max-width: 345px;
+    font-size: 15px;
+    padding-left: 19px!important;
+}
+  #ourFounderMobile{
+height:850px;
+display: block;
+}
+.image-container {
+max-width: 100px;
+}
+.height-450-small-screen{
+
+height: 323px;
+}
+.manish-mobile-img img{
+width: 334px;
+height: 401px;
+margin: auto; 
+position:absolute;
+
+} .manish-mobile-img img {
+  width: 275px;
+  height: auto;
+  margin: auto;
+  left: 5%;
+  top: 8px;
+  z-index: 9;
+}
+.manish-text.pl-5 {
+  padding-left: 1rem !important;
+}
+
+}
+
+@media (max-width: 500px) {
+  #ourFounder{
+    display: none;
+  } 
+  #our_investment-phy .container{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .inner-text-content, .our_investment-phy, .our_investment-phy img {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    padding-top: 0px;
+}
+.blue-boxes-invest{
+  height: auto!important;
+  padding-bottom: 10px;
+}
+}/*  */

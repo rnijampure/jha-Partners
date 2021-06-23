@@ -1,0 +1,92 @@
+.carrer-page header.masthead { 
+    min-height: 550px; 
+    height: 550px; 
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+}
+
+.carrer-page  header.masthead .we-propel-bg {
+  background-color: #100e41;
+  background: url(../assets/img/carrer.png) no-repeat center middle;
+  background: url(../assets/img/carrer.png) no-repeat left center, linear-gradient(to top, #121247 148%, #100e41 125%, #100e41 80%, #1a1a6f 54%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  min-height: 525px;
+}
+.carrer-page header.masthead {
+  min-height: 550px;
+  height: 550px;
+  padding-top: 4.5rem;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+  p{
+    color:#100e41;
+    font-size: 18px;
+    font-family: 'Roboto-Medium';
+  }
+  h3{
+      font-family: 'Roboto-Medium';
+  }
+  .carrer-page .inner-text-content hr.divider {
+    max-width: 9.25rem;
+    border-width: 0.2rem;
+    border-color: #d4801c;
+    
+    margin-left: 0px;
+
+    /* float: left; */ 
+}
+.apply-now{
+  font-size: 24px;
+  font-family: 'Roboto-Medium';
+  font-weight: bold;
+  color:#d4801c;
+  align-self: start;
+}
+.apply-now:hover{
+text-decoration: none;
+}
+  .carrer-page #apply-now .blue-boxes{
+    width: 352px;
+    height: auto;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+
+  }
+  .job-1.bulb-icon {
+    background: url(../assets/img/carrer/first.png) no-repeat;
+}
+.rocket-icon.job-2{
+  background: url(../assets/img/carrer/mark_man.png) no-repeat;
+}
+.invest-icon.job-3{
+  background: url(../assets/img/carrer/sales.png) no-repeat;
+}
+.carrer-page .g-f-i-icons {
+  height: 182px;
+  width: 182px;
+  top: -54px;
+  left: 24%;
+  position: absolute;
+}
+.carrer-page .inner-text-content {
+  max-width: 262px;
+  margin: auto;
+  padding-top: 110px;
+}
+  #apply-now .blue-boxes h3{
+    color:#100e41;
+    font-size: 20px;
+    font-family: 'Roboto-Medium';
+  }
+  #apply-now .blue-boxes p {
+    color: #100e41;
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding-bottom: 10px;
+    min-height: 138px;
+}
+  
